@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>中文 Vocab flashcards</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
+    <!-- Use a custom theme from the Glitch app -->
+    <link rel="stylesheet" href="/themes/robot-lung.css">
+    <!-- Or any built-in Reveal.js theme by pulling from the CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.css"> -->    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css' : 
+        'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <!-- presentation content -->
+    <div class="reveal">
+      <div class="slides">
+        <!-- Slides are loaded from an external markdown file -->
+        <section id="index" data-markdown="/index.md"></section>
+        <section id="L6-1" data-markdown="vocab/L6-1.md"></section>
+        <section id="L6-2" data-markdown="vocab/L6-2.md"></section>
+        <section id="L7-1" data-markdown="vocab/L7-1.md"></section>
+      </div>      
+      <div class="home">
+        <a href="#/index">⏪</a>
+      </div>      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script>
+    <script type="text/javascript">
+      // Customize your Reveal.js presentation
+      // See all options - https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        center: true,
+        controls: true,
+        history: true,
+        transition: "slide",
+        transitionSpeed: "fast",
+        margin: 0.2,
+        loop: false,
+        slideNumber: 0,
+        dependencies: [
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.js', async: true },
+          // the notes plugin can't run off the CDN b/c the HTML file isn't there
+          { src: '/plugins/notes.js', async: true }
+        ]
+      });
+    </script>
+    <!-- extra divs needed by the dzello-*.css themes -->
+    <div class="line top"></div>
+    <div class="line bottom"></div>
+    <div class="line left"></div>
+    <div class="line right"></div>
+  </body>
+</html>
